@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="utf-8" >
+
+
+<title>JS Bin</title>
+<script src="lib/angular.js"></script>
+</head>
+<body  ng-controller="abc" >
+  <input type="text" ng-model="bywatch" >
+  {{result}}
+
+  <script type="text/javascript">
+
+  function abc($scope){
+    $scope.bywatch = 0;
+
+    $scope.result = 22;
+
+    calcIt = function(){
+      $scope.result = $scope.bywatch*20;
+    }
+
+    $scope.$watch( 'bywatch', calcIt ); 
+
+   
+
+    
+  }
+
+  
+  </script>
+  
+</body>
+</html>

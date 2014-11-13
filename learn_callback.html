@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" >
+
+
+<title>JS Bin</title>
+<script src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.js"></script>
+</head>
+<body ng-app="inputApp" ng-controller="Ctrl" >
+
+  <span ng-show="!noDB" style="color:blue;">已经连接数据库。</span>
+  <br/>
+  <br/>
+    <span ng-show="noDB" style="color:blue;">没有连接数据库，当前运行于单机模式。</span>
+
+
+<script type="text/javascript">
+var inputApp = angular.module('inputApp', []);
+
+function Ctrl($scope, $timeout) {
+
+  $scope.noDB = false;
+
+  $scope.ifNoDB = function (){
+    alert($scope.noDB );
+    $scope.noDB = true;
+
+    // *******************
+    //  下面这句是关键。
+    // *******************
+    $scope.$apply()
+  }
+
+  setTimeout(function(){$scope.ifNoDB();},3000);
+
+  
+}
+
+
+  
+</script>
+
+
+</body>
+</html>

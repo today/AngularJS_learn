@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/angular.js"></script>
+<script src="lib/angular-route.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+</head>
+<body ng-app="routeApp" ng-controller="MyController">
+
+  <script type="text/javascript">
+  var routeApp = angular.module('routeApp', ['ngRoute']);
+  
+  routeApp.controller('MyController', function($scope, $route, $routeParams, $location) {
+     $scope.$route = $route;
+     $scope.$location = $location;
+     $scope.$routeParams = $routeParams;
+ })
+
+  </script>
+    
+  Choose:
+  <a href="Book/Moby">Moby</a> |
+  <a href="Book/Moby/ch/1">Moby: Ch1</a> |
+  <a href="Book/Gatsby">Gatsby</a> |
+  <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
+  <a href="Book/Scarlet">Scarlet Letter</a><br/>
+  
+  <pre>$location.path() = {{$location.path()}}</pre>
+  <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+  <pre>$route.current.params = {{$route.current.params}}</pre>
+  <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+  <pre>$routeParams = {{$routeParams}}</pre>
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" >
+
+
+<title>JS Bin</title>
+<script src="lib/angular.js"></script>
+</head>
+<body ng-app >
+
+  <script type="text/javascript">
+  fs = require('fs');
+  
+      var abc = {patients_id:"00001",name:"罗辑","sex":"男","age":"46","phone_no":"18990000001","comment":"123456 abcdef"};;
+
+      
+      //abc.push( new Date());
+
+      var strObj = JSON.stringify(abc);
+      //console.log( "aStr = ###" + strObj + "###" );
+      fs.writeFileSync( 'data/abc.json',  strObj );
+
+      var abc = [];
+      var def = {patients_id:"00001",name:"罗辑","sex":"男","age":"46","phone_no":"18990000001","comment":"123456 abcdef"};
+      abc.push(def);
+      abc.push(def);
+      
+      var strObj = JSON.stringify(abc);
+      //console.log( "aStr = ###" + strObj + "###" );
+      //fs.writeFileSync( "data/def.json",  strObj );
+
+  
+  </script>
+    
+  XXXXXXXX
+</body>
+</html>

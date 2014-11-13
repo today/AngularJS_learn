@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/angular.js"></script>
+<script src="lib/angular-route.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+</head>
+<body ng-app ng-controller="Ctrl">
+
+  <script type="text/javascript">
+    
+//        var queryString = location.href.substring(location.href.indexOf("?")+1);
+    function Ctrl($scope) {
+      $scope.queryString = location.href.substring(location.href.indexOf("?")+1);
+      
+    }
+
+
+
+  </script>
+  URL:{{queryString}}
+ 
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
